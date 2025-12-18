@@ -39,6 +39,8 @@ export default function NewsList({ news }: Props) {
                   />
                   {article.publishedAt}
                 </span>
+                <Category category={article.category} />
+                <Date date={article.publishedAt ?? article.createdAt} />
               </dd>
             </dl>
           </div>
