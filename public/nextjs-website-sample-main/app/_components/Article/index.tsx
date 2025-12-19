@@ -13,6 +13,7 @@ export default function Article({ data }: Props) {
   return (
     <main>
       <h1 className={styles.title}>{data.title}</h1>
+      <p className={styles.description}>{data.description}</p>
       <div className={styles.meta}>
         <Link
           href={`/news/category/${data.category.id}`}
