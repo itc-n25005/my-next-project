@@ -5,6 +5,7 @@ import timezone from 'dayjs/plugin/timezone';
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-export const formatDate = (date: string) => {
+export const formatDate = (date?: string) => {
+  if (!date) return '';
   return dayjs.utc(date).tz('Asia/Tokyo').format('YYYY/MM/DD');
 };
